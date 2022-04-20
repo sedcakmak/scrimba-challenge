@@ -53,10 +53,17 @@ body {
   height: 100vh;
   background-color: var(--turquoise-green);
   font-family: var(--font-family);
+  transition: background-color 500ms;
 }
 
 .points-p {
   font-size: 2em;
+  font-weight: bold;
+}
+
+.extreme {
+  -webkit-animation: zoom-in-zoom-out 0.25s linear infinite;
+  animation: zoom-in-zoom-out 0.25s linear infinite;
 }
 
 .btns-container {
@@ -88,7 +95,7 @@ body {
 .btn:hover,
 .btn:focus {
   -webkit-filter: brightness(0.95);
-          filter: brightness(0.95);
+  filter: brightness(0.95);
 }
 
 .btn:active {
@@ -103,16 +110,26 @@ body {
   background-color: lightpink;
 }
 
-.green {
-  color: green !important;
-  font-style: italic;
+@-webkit-keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
-[data-emoji] {
-  font-style: normal;
-  font-weight: normal;
-}
-[data-emoji]:before {
-  content: attr(data-emoji);
-  margin-right: 0.125em;
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
