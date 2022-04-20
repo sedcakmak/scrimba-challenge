@@ -52,8 +52,6 @@ function renderBtns() {
     btnsContainer.appendChild(buttonElement);
     buttonElement.addEventListener("click", updatePoints);
   });
-  // 1. Render buttons onto page
-  // 2. Update points
 }
 
 // Updating Points
